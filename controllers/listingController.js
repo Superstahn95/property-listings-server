@@ -4,6 +4,7 @@ const Listing = require("../models/listing");
 const cloudinary = require("../utils/cloudinary");
 
 exports.createListing = asyncErrorHandler(async (req, res, next) => {
+  console.log("we just hit here");
   const images = [];
   let coverPhoto = null;
 

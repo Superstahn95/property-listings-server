@@ -17,6 +17,9 @@ app.use(cors());
 
 //routing middleware
 app.use("/api/v1/listing", require("./routes/listingRoute"));
+app.use("/api/v1/request", require("./routes/requestRoute"));
+app.use("/api/v1/message", require("./routes/messageRoute"));
+app.use("/api/v1/subscriber", require("./routes/subscriberRoute"));
 
 //global error handler
 app.use(globalErrorHandler);

@@ -23,7 +23,7 @@ const listingSchema = new mongoose.Schema(
       required: true,
     },
     rooms: {
-      type: Number,
+      type: String,
       required: true,
     },
     state: {
@@ -38,6 +38,10 @@ const listingSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    featured: {
+      type: Boolean,
+      default: false,
+    },
     coverPhoto: {
       type: Object,
       required: true,
@@ -50,6 +54,12 @@ const listingSchema = new mongoose.Schema(
         required: true,
       },
     },
+    requests: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Request",
+      },
+    ],
     images: [
       {
         url: {
@@ -67,3 +77,7 @@ const listingSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model("Listing", listingSchema);
+// Grand ville estate, waterlines
+// zen@gmail.com
+// 070354637566
+// Zen mansions
