@@ -5,6 +5,7 @@ const {
   deleteListing,
   getAllListing,
   getListing,
+  getFeaturedListing,
 } = require("../controllers/listingController");
 const multer = require("../middlewares/multer");
 
@@ -17,6 +18,7 @@ router.post(
   createListing
 );
 router.get("/", getAllListing);
+router.get("/featured", getFeaturedListing);
 router.get("/:id", getListing);
 //proteceted routes
 router.delete("/:id", deleteListing);

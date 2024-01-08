@@ -34,7 +34,7 @@ exports.createRequest = asyncErrorHandler(async (req, res, next) => {
 
   res.status(201).json({
     status: "success",
-    request,
+    message: "We have received your request and we will get back to you",
   });
 });
 

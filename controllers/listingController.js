@@ -99,3 +99,10 @@ exports.approveOrRevokeListing = asyncErrorHandler(async (req, res, next) => {
     listing: updatedListing,
   });
 });
+exports.getFeaturedListing = asyncErrorHandler(async (req, res, next) => {
+  const listing = await Listing.findOne({ featured: true });
+  res.status(200).json({
+    status: "success",
+    listing,
+  });
+});
