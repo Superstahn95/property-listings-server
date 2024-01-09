@@ -4,7 +4,6 @@ const Listing = require("../models/listing");
 const cloudinary = require("../utils/cloudinary");
 
 exports.createListing = asyncErrorHandler(async (req, res, next) => {
-  console.log("we just hit here");
   const images = [];
   let coverPhoto = null;
 
@@ -38,7 +37,6 @@ exports.createListing = asyncErrorHandler(async (req, res, next) => {
       public_id,
     };
   }
-  console.log(coverPhoto);
 
   const listing = new Listing({ ...req.body, images, coverPhoto });
 
